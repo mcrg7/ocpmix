@@ -130,19 +130,6 @@ objects:
       name: ${HDFS}-namenode
       weight: 100
     wildcardPolicy: None
-- apiVersion: v1
-  kind: Route
-  metadata:
-    name: ${HDFS}-namenode-hfx
-  spec:
-    host: ${HDFS}-namenode-hfx
-    port:
-      targetPort: 8000
-    to:
-      kind: Service
-      name: ${HDFS}-namenode
-      weight: 100
-    wildcardPolicy: None    
 #HDFS-datanode section
 - kind: StatefulSet
   apiVersion: apps/v1beta1
